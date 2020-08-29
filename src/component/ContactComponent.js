@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import AntDesign from "react-native-vector-icons/AntDesign";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 
 export default class ContactComponent extends React.Component {
   constructor(props) {
@@ -58,6 +59,20 @@ export default class ContactComponent extends React.Component {
           user_avatar: require("../images/avatar_default.png"),
           user_phonenumber: "+84 4532012",
         },
+        {
+          id: "IlpBApYmye",
+          user_id: "trongthat_IlpBApYmye",
+          user_name: "TRONG THAT",
+          user_avatar: require("../images/avatar_default.png"),
+          user_phonenumber: "+84 4532012",
+        },
+        {
+          id: "IlpBApYmye",
+          user_id: "trongthat_IlpBApYmye",
+          user_name: "TRONG THAT",
+          user_avatar: require("../images/avatar_default.png"),
+          user_phonenumber: "+84 4532012",
+        },
       ],
     };
   }
@@ -65,7 +80,19 @@ export default class ContactComponent extends React.Component {
     return (
       <TouchableOpacity style={styles.item_container}>
         <Image source={item.user_avatar} style={{ width: 80, height: 80 }} />
-        <View style={styles.user}></View>
+        <View style={styles.user}>
+          <View>
+            <Text style={{ color: "black", fontWeight: "bold" }}>
+              {item.user_name}
+            </Text>
+            <Text style={{ color: "grey", marginTop: 5 }}>
+              {item.user_phonenumber}
+            </Text>
+          </View>
+          <TouchableOpacity style={{ position: "absolute", right: 0 }}>
+            <MaterialIcons name="call" color="green" size={20} />
+          </TouchableOpacity>
+        </View>
       </TouchableOpacity>
     );
   };
@@ -82,7 +109,7 @@ export default class ContactComponent extends React.Component {
             <AntDesign name="pluscircle" color="white" size={25} />
           </TouchableOpacity>
         </LinearGradient>
-        <View style={styles.flatList}>
+        <View style={{ flex: 1 }}>
           <FlatList
             data={this.state.data_contact}
             renderItem={this.renderItem}
@@ -126,5 +153,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 15,
   },
-  user,
+  user: {
+    flex: 1,
+    marginTop: 15,
+    paddingLeft: 15,
+    alignItems: "center",
+    borderBottomWidth: 1,
+    borderBottomColor: "#f2f2f2",
+  },
+  flatList: {
+    flex: 1,
+  },
 });
