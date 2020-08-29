@@ -1,10 +1,19 @@
 import React from "react";
-import { View, Text, StyleSheet, ImageBackground, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  Image,
+  Dimensions,
+} from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { TouchableOpacity, FlatList } from "react-native-gesture-handler";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Entypo from "react-native-vector-icons/Entypo";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import { TextInput } from "react-native-paper";
 
 export default class MessageComponent extends React.Component {
   constructor(props) {
@@ -148,7 +157,22 @@ export default class MessageComponent extends React.Component {
             </ImageBackground>
           </View>
           <View style={styles.selection}>
-            <View style={styles.searchBar}></View>
+            <View style={styles.searchBar}>
+              <Ionicons name="ios-search" color="gray" size={20} />
+              <TextInput
+                underlineColorAndroid="#f2f2f2"
+                style={{
+                  flex: 1,
+                  paddingHorizontal: 10,
+                  height: 30,
+                  backgroundColor: "#f2f2f2",
+                }}
+                placeholder="Search..."
+              />
+              <TouchableOpacity>
+                <Ionicons name="ios-close" color="gray" size={25} />
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
         <View style={styles.footer}>
@@ -163,6 +187,8 @@ export default class MessageComponent extends React.Component {
     );
   }
 }
+const { width } = Dimensions.get("window");
+const width_searchBar = width * 0.8;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -229,5 +255,15 @@ const styles = StyleSheet.create({
   selection: {
     height: "35%",
     alignItems: "center",
+  },
+  searchBar: {
+    width: width_searchBar,
+    height: 40,
+    flexDirection: "row",
+    backgroundColor: "#f2f2f2",
+    marginTop: 15,
+    borderRadius: 50,
+    alignItems: "center",
+    paddingHorizontal: 15,
   },
 });
