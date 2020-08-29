@@ -1,12 +1,112 @@
 import React from "react";
 import { View, Text, StyleSheet, ImageBackground, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { TouchableOpacity, FlatList } from "react-native-gesture-handler";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Entypo from "react-native-vector-icons/Entypo";
 
 export default class MessageComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data_message: [
+        {
+          id: "rwBa06nqlR",
+          user_id: "trongtinh_Rc0LjZ54yj",
+          user_name: "TRONG TINH",
+          user_avatar: require("../images/avatar_default.png"),
+          sender_id: "trongtinh_Rc0LjZ54yj",
+          messages: "Hello",
+          readed: false,
+          num_messages_readed: 6,
+          created_at: "Few seconds",
+        },
+        {
+          id: "qKwgXmIoN0",
+          user_id: "huynhnhu_R3J4WUoWXJ",
+          user_name: "HUYNH NHU",
+          user_avatar: require("../images/avatar_default.png"),
+          sender_id: "trongthanh_O7xyqYRvo1",
+          messages: "What are you doing?",
+          readed: true,
+          num_messages_readed: 0,
+          created_at: "1 minute",
+        },
+        {
+          id: "ucPA0NXweB",
+          user_id: "trongthat_IlpBApYmye",
+          user_name: "TRONG THAT",
+          user_avatar: require("../images/avatar_default.png"),
+          sender_id: "trongthat_IlpBApYmye",
+          messages: "Why?",
+          readed: false,
+          num_messages_readed: 3,
+          created_at: "1 day ago",
+        },
+      ],
+    };
+  }
+  renderItem = ({ item }) => {
+    return (
+      <TouchableOpacity style={styles.item_container}>
+        <Image
+          source={item.user_avatar}
+          style={{ width: 50, height: 50 }}
+          resizeMode={"stretch"}
+        />
+        <View style={styles.item_messages}>
+          <View style={{ flex: 1 }}>
+            <Text
+              style={{
+                color: "black",
+                fontWeight: item.readed ? null : "bold",
+              }}
+            >
+              {item.user_name}
+            </Text>
+            <Text
+              style={{
+                color: "black",
+                fontSize: 12,
+                fontWeight: item.readed ? null : "bold",
+                marginTop: 3,
+              }}
+            >
+              {item.messages}
+            </Text>
+          </View>
+          <View style={{ alignItems: "flex-end" }}>
+            <Text
+              style={{
+                color: "black",
+                fontSize: 12,
+                fontStyle: "italic",
+                fontWeight: item.readed ? null : "bold",
+                textAlign: "right",
+              }}
+            >
+              {item.created_at}
+            </Text>
+            {item.readed ? null : (
+              <View style={styles.num_readed}>
+                <Text
+                  style={{ color: "white", fontWeight: "bold", fontSize: 12 }}
+                >
+                  {item.num_messages_readed > 5
+                    ? "5+"
+                    : item.num_messages_readed}
+                </Text>
+              </View>
+            )}
+          </View>
+        </View>
+      </TouchableOpacity>
+    );
+  };
+  ItemSeparatorComponent = () => {
+    return <View style={{ height: 1, paddingVertical: 10 }}></View>;
+  };
   render() {
     return (
       <View style={styles.container}>
@@ -47,8 +147,18 @@ export default class MessageComponent extends React.Component {
               </View>
             </ImageBackground>
           </View>
+          <View style={styles.selection}>
+            <View style={styles.searchBar}></View>
+          </View>
         </View>
-        <View style={styles.footer}></View>
+        <View style={styles.footer}>
+          <FlatList
+            data={this.state.data_message}
+            renderItem={this.renderItem}
+            keyExtractor={(item) => item.id}
+            ItemSeparatorComponent={this.ItemSeparatorComponent}
+          />
+        </View>
       </View>
     );
   }
@@ -95,5 +205,29 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 10,
+  },
+  item_container: {
+    flexDirection: "row",
+    paddingHorizontal: 20,
+  },
+  item_messages: {
+    flex: 1,
+    paddingLeft: 15,
+    flexDirection: "row",
+    borderBottomWidth: 1,
+    borderBottomColor: "#f2f2f2",
+  },
+  num_readed: {
+    height: 20,
+    backgroundColor: "red",
+    paddingHorizontal: 5,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 50,
+    marginTop: 3,
+  },
+  selection: {
+    height: "35%",
+    alignItems: "center",
   },
 });
