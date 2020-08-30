@@ -12,6 +12,7 @@ import LoginComponent from "../component/LoginComponent";
 import ContactComponent from "../component/ContactComponent";
 import MessagesComponent from "../component/MessageComponent";
 import SettingsComponent from "../component/SettingsComponent";
+import ChatComponent from "../component/ChatComponent";
 
 import NotificationComponent from "../component/NotificationComponent";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
@@ -120,6 +121,7 @@ export default function RootStack() {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="LoginScreen" component={LoginComponent} />
         <Stack.Screen name="Message" component={AccountTabScreen} />
+        <Stack.Screen name="Chat" component={ChatComponent} />
       </Stack.Navigator>
     </NavigationContainer>
   );

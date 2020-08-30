@@ -12,6 +12,8 @@ import { TouchableOpacity, FlatList } from "react-native-gesture-handler";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Entypo from "react-native-vector-icons/Entypo";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { TextInput } from "react-native-paper";
 
@@ -58,7 +60,10 @@ export default class MessageComponent extends React.Component {
   }
   renderItem = ({ item }) => {
     return (
-      <TouchableOpacity style={styles.item_container}>
+      <TouchableOpacity
+        style={styles.item_container}
+        onPress={() => this.props.navigation.navigate("Chat")}
+      >
         <Image
           source={item.user_avatar}
           style={{ width: 50, height: 50 }}
@@ -182,6 +187,26 @@ export default class MessageComponent extends React.Component {
             keyExtractor={(item) => item.id}
             ItemSeparatorComponent={this.ItemSeparatorComponent}
           />
+          <View
+            style={{
+              alignItems: "flex-end",
+              marginRight: 25,
+              marginBottom: 20,
+            }}
+          >
+            <TouchableOpacity
+              style={{
+                width: 60,
+                height: 60,
+                borderRadius: 70 / 2,
+                backgroundColor: "#39b54a",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <MaterialIcons name="edit" size={24} color="#FFF" />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     );
