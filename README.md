@@ -12,7 +12,7 @@
 ## Run on Device
 - download expo app in andriod or ios device and scan the barcode
 ## Project info
-###### Created a UI of a proffessional chatting app using react native which could work on both Andriod as well as IOS
+###### Created a UI of a professional chatting app using react native which could work on both Andriod as well as IOS
 ## Packages & Libraries used
 - React Native - A framework for building native apps with React.
 - Expo - Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
@@ -22,5 +22,7 @@
 - https://www.zomentum.com/
 - Whatsapp
 - Skype 
-
+```
+hi
+```
 
