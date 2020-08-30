@@ -11,7 +11,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 
-export default class NotificationComponent extends React.Component {
+export default class SettingsComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,18 +64,12 @@ export default class NotificationComponent extends React.Component {
       <View style={styles.container}>
         <LinearGradient
           start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
           colors={["#39b54a", "#006837"]}
           style={styles.header}
         >
-          <Text style={styles.textHeader}>NOTIFICATION</Text>
+          <Text style={styles.textHeader}>SETTINGS</Text>
         </LinearGradient>
-        <View style={{ flex: 1 }}>
-          <FlatList
-            data={this.state.data_notification}
-            renderItem={this.renderItem}
-            keyExtractor={(item) => item.id}
-          />
-        </View>
       </View>
     );
   }

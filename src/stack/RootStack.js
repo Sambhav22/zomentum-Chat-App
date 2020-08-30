@@ -11,6 +11,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import LoginComponent from "../component/LoginComponent";
 import ContactComponent from "../component/ContactComponent";
 import MessagesComponent from "../component/MessageComponent";
+import SettingsComponent from "../component/SettingsComponent";
+
 import NotificationComponent from "../component/NotificationComponent";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 /*const Stacknavigator =createStackNavigator({
@@ -83,6 +85,11 @@ const AccountTabScreen = ({ navigation, routes }) => {
               return (
                 <MaterialIcons name="notifications" size={23} color="gray" />
               );
+          } else if (route.name === "Settings") {
+            if (focused)
+              return <MaterialIcons name="settings" size={28} color="green" />;
+            else
+              return <MaterialIcons name="settings" size={23} color="gray" />;
           }
 
           // You can return any component that you like here!
@@ -102,6 +109,7 @@ const AccountTabScreen = ({ navigation, routes }) => {
       <Tab.Screen name="Message" component={MessagesComponent} />
       <Tab.Screen name="Contact" component={ContactComponent} />
       <Tab.Screen name="Notification" component={NotificationComponent} />
+      <Tab.Screen name="Settings" component={SettingsComponent} />
     </Tab.Navigator>
   );
 };
