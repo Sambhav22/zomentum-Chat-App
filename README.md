@@ -4,5 +4,5 @@
 
 ## SETUP
 ## Prerequisites
-###### *Install Node and NPM package manager
+- Install Node and NPM package manager
 [https://nodejs.org/en/download/]
