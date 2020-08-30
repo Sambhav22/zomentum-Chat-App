@@ -13,14 +13,10 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.Sambhav.chatApp",
+      "versionCode": 1
     }
   }
 }
