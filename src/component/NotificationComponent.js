@@ -29,7 +29,7 @@ export default class NotificationComponent extends React.Component {
           id: "gjYQQVjxTD",
           user_id: "huynhnhu_R3J4WUoWXJ",
           user_name: "Riddhi Jain",
-          user_avatar: require("../images/avatar_default.png"),
+          user_avatar: require("../images/cathy.jpg"),
           notificaton: "comment your avatar.",
           readed: true,
           created_at: "1 day ago",
