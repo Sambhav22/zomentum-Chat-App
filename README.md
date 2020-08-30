@@ -6,3 +6,21 @@
 ## Prerequisites
 - Install Node and NPM package manager
 [https://nodejs.org/en/download/]
+## Installation
+- run npm install 
+- open cmd and run npm start
+## Run on Device
+- download expo app in andriod or ios device and scan the barcode
+## Project info
+###### Created a UI of a proffessional chatting app using react native which could work on both Andriod as well as IOS
+## Packages & Libraries used
+- React Native - A framework for building native apps with React.
+- Expo - Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
+- React Navigation V5 - used for Routing and navigation for your React Native app
+- React Vector Icons - Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.
+## Insipiration for the project
+- https://www.zomentum.com/
+- Whatsapp
+- Skype 
+
+
