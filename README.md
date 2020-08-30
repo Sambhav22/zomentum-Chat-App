@@ -1,4 +1,5 @@
 # zomentum-Chat-App
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 ###### Andriod Apk Link [https://drive.google.com/file/d/1WlMwWBooUqVOJNQFcsZxquktsmyosIYx/view?usp=sharing]
 ###### App demostration Video Link [https://drive.google.com/file/d/1iBvVEvzKyZHdhRTncCwg43fR36ZJUiD0/view?usp=sharing]
 
