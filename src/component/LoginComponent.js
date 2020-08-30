@@ -32,9 +32,10 @@ export default class LoginComponent extends React.Component {
             <View style={styles.logo}>
               <Image
                 source={require("../images/logo.png")}
-                style={{ width: "100%", height: "100%" }}
+                style={{ width: "130%", height: "130%" }}
                 resizeMode={"stretch"}
               />
+              <Text style={{ fontSize: 25, fontWeight: "100" }}>CHAT APP</Text>
             </View>
           </ImageBackground>
         </View>
@@ -56,6 +57,7 @@ export default class LoginComponent extends React.Component {
           >
             <LinearGradient
               start={{ x: 0, y: 0 }}
+              end={{ x: 0, y: 2 }}
               colors={["#39b54a", "#006837"]}
               style={styles.login}
             >
@@ -89,6 +91,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logo: {
+    alignItems: "center",
     width: width_logo,
     height: height_logo,
   },

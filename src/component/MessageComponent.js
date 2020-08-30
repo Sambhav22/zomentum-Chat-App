@@ -23,7 +23,7 @@ export default class MessageComponent extends React.Component {
         {
           id: "rwBa06nqlR",
           user_id: "trongtinh_Rc0LjZ54yj",
-          user_name: "TRONG TINH",
+          user_name: "Aman Gupta",
           user_avatar: require("../images/avatar_default.png"),
           sender_id: "trongtinh_Rc0LjZ54yj",
           messages: "Hello",
@@ -34,7 +34,7 @@ export default class MessageComponent extends React.Component {
         {
           id: "qKwgXmIoN0",
           user_id: "huynhnhu_R3J4WUoWXJ",
-          user_name: "HUYNH NHU",
+          user_name: "Aryan Garg",
           user_avatar: require("../images/avatar_default.png"),
           sender_id: "trongthanh_O7xyqYRvo1",
           messages: "What are you doing?",
@@ -45,7 +45,7 @@ export default class MessageComponent extends React.Component {
         {
           id: "ucPA0NXweB",
           user_id: "trongthat_IlpBApYmye",
-          user_name: "TRONG THAT",
+          user_name: "Ayush Mishra",
           user_avatar: require("../images/avatar_default.png"),
           sender_id: "trongthat_IlpBApYmye",
           messages: "Why?",
@@ -131,7 +131,7 @@ export default class MessageComponent extends React.Component {
                 <View style={styles.logo}>
                   <Image
                     source={require("../images/avatar_default.png")}
-                    style={{ width: 80, height: 80 }}
+                    style={{ width: 80, height: 80, borderRadius: 50 }}
                   />
                 </View>
                 <View style={styles.user}>
