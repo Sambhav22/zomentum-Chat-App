@@ -22,7 +22,13 @@
 - https://www.zomentum.com/
 - Whatsapp
 - Skype 
+# Project Structure
 ```
-hi
+/app          - react native specific code
+/src
+  /components  - react native components and screens
+  /images      - contains image
+  /stack       - contains navigation structure
+/assets        - contains splash screen,app icon and favicons
 ```
 
