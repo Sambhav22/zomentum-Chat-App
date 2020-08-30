@@ -8,6 +8,8 @@ zomentum-Chat-App
 ###### Andriod Apk Link [https://drive.google.com/file/d/1WlMwWBooUqVOJNQFcsZxquktsmyosIYx/view?usp=sharing]
 ###### App demostration Video Link [https://drive.google.com/file/d/1iBvVEvzKyZHdhRTncCwg43fR36ZJUiD0/view?usp=sharing]
 
+## Project info
+###### Created a **Responsive UI** of a professional chatting app using react native which could work on both Andriod as well as IOS
 ## SETUP
 ## Prerequisites
 - Install Node and NPM package manager
@@ -17,8 +19,7 @@ zomentum-Chat-App
 - open cmd and run npm start
 ## Run on Device
 - download expo app in andriod or ios device and scan the barcode
-## Project info
-###### Created a Responsive UI of a professional chatting app using react native which could work on both Andriod as well as IOS
+
 ## Packages & Libraries used
 - React Native - A framework for building native apps with React.
 - Expo - Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
