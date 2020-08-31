@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://im4.ezgif.com/tmp/ezgif-4-2a6d7e68706c.gif" width="300" height="500" />
+<img src="https://media1.giphy.com/media/loFxQwsW2ENbmkIVeq/giphy.gif" width="300" height="500" />
  </p>
 <p align="center">
 zomentum-Chat-App
