@@ -39,4 +39,4 @@ zomentum-Chat-App
 /assets        - contains splash screen,app icon and favicons
 ```
 # Screenshots
-![get all show images](https://drive.google.com/uc?export=view&id=1l2PKSt4osXJQAsfuY9jlraesz7vxyTu1" | width=100)
+![Chat](./screebshots/SS2.jpeg)
