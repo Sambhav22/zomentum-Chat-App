@@ -7,9 +7,22 @@ zomentum-Chat-App
 
 ###### Andriod Apk Link [https://drive.google.com/file/d/1WlMwWBooUqVOJNQFcsZxquktsmyosIYx/view?usp=sharing]
 ###### App demostration Video Link [https://drive.google.com/file/d/1iBvVEvzKyZHdhRTncCwg43fR36ZJUiD0/view?usp=sharing]
-
+***
+# Index
+- Project Info
+- Description of the Problem Statement
+- Setup
+- Inspiration for the project
+- Project Structure
+- Screenshots
+- Author
+***
 ## Project info
 ###### Created a **Responsive UI** of a professional chatting app using react native which could work on both Andriod as well as IOS
+***
+## Description of the Problem Statement
+- Design a UI for a professional chat application.
+***
 ## SETUP
 ## Prerequisites
 - Install Node and NPM package manager
@@ -29,6 +42,7 @@ zomentum-Chat-App
 - https://www.zomentum.com/
 - Whatsapp
 - Skype 
+***
 # Project Structure
 ```
 /app          - react native specific code
@@ -38,6 +52,7 @@ zomentum-Chat-App
   /stack       - contains navigation structure
 /assets        - contains splash screen,app icon and favicons
 ```
+***
 # Screenshots
 ## AppIcon
 ![AppIcon](./screenshots/SS1.jpg)<br/>
@@ -53,3 +68,7 @@ zomentum-Chat-App
 ![ChatScreen1](./screenshots/SS6.jpg)<br/>
 ## ChatScreen2
 ![ChatScreen2](./screenshots/SS7.jpg)
+***
+# AUTHOR
+## Sambhav Jain
+- Github: @Sambhav22
